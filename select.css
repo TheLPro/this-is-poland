@@ -5,6 +5,10 @@
   --large_bubble_size: 150px;
 }
 
+a{
+  color: var(--text);
+}
+
 html,
 body {
   overflow: hidden;
