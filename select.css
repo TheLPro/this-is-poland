@@ -108,7 +108,7 @@ button {
   color: var(--primary);
   border-radius: 1rem;
   width: 50rem;
-  z-index: 694200;
+  z-index: 694200000;
 }
 
 .modal img {
