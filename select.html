@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is Poland</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="select.css" />
+    <link
+      rel="shortcut icon"
+      href="https://vectorflags.s3.amazonaws.com/flags/pl-circle-01.png"
+      type="image/svg"
+    />
+    <link rel="stylesheet" href="loader.css" />
+  </head>
+  <body>
+    <main>
+      <dialog>
+        <p>
+          To use this map, just scroll around and feel free to click any item
+          you would like. You will then see more about that Polish
+          tradition/food.
+        </p>
+        <button autofocus>Close</button>
+      </dialog>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="70"
+        height="70"
+        viewBox="0 0 34 34"
+        fill="none"
+        class="help_btn"
+      >
+        <path
+          d="M17 0C7.61182 0 0 7.61456 0 17C0 26.3909 7.61182 34 17 34C26.3882 34 34 26.3909 34 17C34 7.61456 26.3882 0 17 0ZM17 30.7097C9.42321 30.7097 3.29032 24.5793 3.29032 17C3.29032 9.42575 9.42348 3.29032 17 3.29032C24.574 3.29032 30.7097 9.42342 30.7097 17C30.7097 24.5767 24.5793 30.7097 17 30.7097ZM24.3514 13.2161C24.3514 17.8124 19.3871 17.8832 19.3871 19.5817V20.0161C19.3871 20.4704 19.0188 20.8387 18.5645 20.8387H15.4355C14.9812 20.8387 14.6129 20.4704 14.6129 20.0161V19.4226C14.6129 16.9723 16.4705 15.9928 17.8743 15.2057C19.0781 14.5309 19.8159 14.0719 19.8159 13.1782C19.8159 11.996 18.3079 11.2113 17.0888 11.2113C15.4992 11.2113 14.7654 11.9638 13.7339 13.2656C13.4558 13.6166 12.9483 13.6818 12.5914 13.4112L10.6842 11.965C10.3341 11.6996 10.2557 11.2064 10.5029 10.8433C12.1225 8.46511 14.1854 7.12903 17.3972 7.12903C20.7609 7.12903 24.3514 9.75471 24.3514 13.2161ZM19.879 24.6774C19.879 26.2649 18.5875 27.5565 17 27.5565C15.4125 27.5565 14.121 26.2649 14.121 24.6774C14.121 23.0899 15.4125 21.7984 17 21.7984C18.5875 21.7984 19.879 23.0899 19.879 24.6774Z"
+          fill="white"
+        />
+      </svg>
+
+      <h1>This is Poland</h1>
+      <div id="dot_container">
+        <div id="dot_loading">
+          <h2>Loading Dots...</h2>
+          <svg
+            class="ip"
+            viewBox="0 0 256 128"
+            width="256px"
+            height="128px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#5ebd3e" />
+                <stop offset="33%" stop-color="#ffb900" />
+                <stop offset="67%" stop-color="#f78200" />
+                <stop offset="100%" stop-color="#e23838" />
+              </linearGradient>
+              <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
+                <stop offset="0%" stop-color="#e23838" />
+                <stop offset="33%" stop-color="#973999" />
+                <stop offset="67%" stop-color="#009cdf" />
+                <stop offset="100%" stop-color="#5ebd3e" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke-linecap="round" stroke-width="16">
+              <g class="ip__track" stroke="#ddd">
+                <path d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56" />
+                <path d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64" />
+              </g>
+              <g stroke-dasharray="180 656">
+                <path
+                  class="ip__worm1"
+                  stroke="url(#grad1)"
+                  stroke-dashoffset="0"
+                  d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56"
+                />
+                <path
+                  class="ip__worm2"
+                  stroke="url(#grad2)"
+                  stroke-dashoffset="358"
+                  d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <p class="attribution">Made by Leon P. (8) and Adam B. (7)</p>
+    </main>
+  </body>
+  <script type="module" src="generateDots.js"></script>
+  <script src="mobile.js"></script>
+  <script>
+    const dialog = document.querySelector('dialog');
+    const showButton = document.querySelector('svg.help_btn');
+    const closeButton = document.querySelector('dialog button');
+    var clicked = false;
+
+    // "Show the dialog" button opens the dialog modally
+    showButton.addEventListener('click', () => {
+      if (!clicked) {
+        dialog.showModal();
+        dialog.style.display = 'inherit';
+        clicked = true;
+      } else {
+        dialog.hideModal();
+        dialog.style.display = 'none';
+        clicked = false;
+      }
+      
+    });
+
+    // "Close" button closes the dialog
+    closeButton.addEventListener('click', () => {
+      dialog.close();
+      dialog.style.display = 'none';
+      clicked = false;
+    });
+  </script>
+</html>

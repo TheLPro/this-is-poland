@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import 'variables.css';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: var(--primary);
+  color: var(--text);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0);
+}
+dialog {
+  background: var(--text);
+  color: #212225;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 0px 41px -13px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 0px 0px 41px -13px rgba(0, 0, 0, 0.51);
+  box-shadow: 0px 0px 41px -13px rgba(0, 0, 0, 0.51);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem; /* Adjust the padding as needed */
+  height: 36rem; /* Set a fixed height or adjust as needed */
+  display: hidden;
+  justify-content: space-between;
+  font-size: 35px;
+  overflow: visible;
+}
+
+dialog button {
+  background: var(--primary);
+  color: var(--text);
+  width: 100%;
+  height: 2.5rem;
+  padding: 15px 0px 15px 0px;
+  font-size: 30px;
+}
+
+::backdrop {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+.attribution {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+p:not(.attribution) {
+  opacity: 0.8;
+  line-height: 1.9;
+}
+svg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+  max-height: 3.5rem;
+  background: var(--text);
+  width: min(70vw, 20rem);
+  margin-inline: auto;
+  color: var(--primary);
+  border-radius: 99999px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  /* outline: 2px solid black; */
+  height: 2.5rem
+}
+button:hover {
+  background: var(--primary);
+  color: var(--text);
+  border: var(--text) solid 2px;
+}
+span.btn {
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+}
+button.start {
+  display: flex;
+  padding: 5px 0px 5px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+p.attribution {
+  position: fixed;
+  text-align: center;
+  font-size: 10px;
+  bottom: 3%;
+  text-wrap: wrap;
+}
+content {
+  overflow: visible;
+}
