@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is Poland</title>
+    <link rel="stylesheet" href="../variables.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e67c6a9ebf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="https://vectorflags.s3.amazonaws.com/flags/pl-circle-01.png"
+      type="image/svg"
+    />
+  </head>
+  <body>
+    <main>
+      <dialog>
+        <p>
+          To use this map, just scroll around and feel free to click any item
+          you would like. You will then see more about that Polish
+          tradition/food.
+        </p>
+        <button autofocus>Close</button>
+      </dialog>
+      <content
+        ><h1>This is Poland</h1>
+        <p>
+          Welcome to the Polish stand on UN Day, 2023! We made this so that you
+          can explore the polish culture, while trying some of it from the
+          stand! We know that there is a more limited amount of space this year,
+          so we hope that this can make up for the loss of some sweets. If you
+          ever need help, just click the “?” in the top right. Enjoy!
+        </p>
+      </content>
+      <button class="start" onclick="window.open('select.html', '_self')">
+        <span class="btn" href="select.html">Lets Start!</span>
+      </button>
+    </main>
+    <p class="attribution">Made by Leon Potocki (8) and Adam Buksowicz (7)</p>
+  </body>
+  <script>
+    const dialog = document.querySelector('dialog');
+    const showButton = document.querySelector('dialog + svg');
+    const closeButton = document.querySelector('dialog button');
+  </script>
+  <script src="mobile.js"></script>
+</html>

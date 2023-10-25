@@ -1,0 +1,61 @@
+@import 'variables.css';
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --trans-dur: 0.3s;
+}
+
+svg.ip {
+  all: unset;
+}
+
+.ip {
+  width: 5em;
+  aspect-ratio: 16/8;
+}
+.ip__track {
+  stroke: var(--text);
+  transition: stroke var(--trans-dur);
+}
+.ip__worm1,
+.ip__worm2 {
+  animation: worm1 2s linear infinite;
+}
+.ip__worm2 {
+  animation-name: worm2;
+}
+
+/* Dark theme */
+
+/* Animation */
+@keyframes worm1 {
+  from {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    animation-timing-function: steps(1);
+    stroke-dashoffset: -358;
+  }
+  50.01% {
+    animation-timing-function: linear;
+    stroke-dashoffset: 358;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes worm2 {
+  from {
+    stroke-dashoffset: 358;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -358;
+  }
+}
